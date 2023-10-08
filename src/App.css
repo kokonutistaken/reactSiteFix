@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Croissant+One&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #252525;
+  overflow-x: hidden;
+  height: 500vh;
+}
+
+.mainPage {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(107, 143, 106);
+  background: linear-gradient(180deg, rgba(107, 143, 106, 0) 34%, #252525 100%);
+  top: 0;
+  height: 100vh;
+  width: 100%;
+}
+.mainPage video {
+  position: absolute;
+  scale: 1.4;
+  z-index: -1;
+}
+.mainPage .App-line1 {
+  position: absolute;
+  right: 5%;
+  top: 30vh;
+  height: 60vh;
+}
+.mainPage h1 {
+  position: absolute;
+  color: #065922;
+  top: 5vh;
+  font-size: 5rem;
+  font-family: "Croissant One", cursive;
+}
+.mainPage .leafImg {
+  position: absolute;
+  top: -9vh;
+  left: 53vw;
+}
+@media screen and (max-width: 1200px) {
+  .mainPage .leafImg {
+    top: -30vh; /* Adjust the position for smaller screens */
+    left: 46vw;
+    scale: 0.7;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .mainPage h1 {
+    font-size: 3rem; /* Adjust the font size for smaller screens */
+    top: 4vh; /* Adjust the position for smaller screens */
+  }
+  .mainPage video {
+    width: 100%; /* Make the video fill the container */
+    height: auto; /* Maintain the aspect ratio */
+    transform: scale(0.8); /* Adjust the scale as needed */
+    transform-origin: top center; /* Set the scaling origin to the top center (optional) */
+  }
+}
+.mainPage .fa-solid.fa-bars {
+  position: absolute;
+  font-size: 2rem;
+  top: 7vh;
+  left: 5%;
+  color: #266b33;
+  z-index: 1;
+}
+.mainPage .sideBar {
+  position: absolute;
+  top: 7vh;
+  left: 8%;
+  border-radius: 20px;
+  height: 0vh;
+  width: 0%;
+  background: rgba(223, 223, 223, 0.1);
+  z-index: 1;
+}
+.mainPage .sideBar span {
+  display: none;
+}
+.mainPage .sideBar .barreTitre {
+  display: none;
+}
+.mainPage .sideBar.opening {
+  animation: openSideBar 0.3s ease-in 1 forwards;
+}
+.mainPage .sideBar.closing {
+  animation: closeSideBar 0.3s ease-in 1 forwards;
+}
+@keyframes openSideBar {
+  0% {
+    height: 0vh;
+    width: 0%;
+  }
+  100% {
+    height: 60vh;
+    width: 20%;
+  }
+}
+@keyframes closeSideBar {
+  0% {
+    height: 60vh;
+    width: 20%;
+  }
+  100% {
+    height: 0vh;
+    width: 0%;
+  }
+}
+.mainPage .enTete {
+  position: absolute;
+  top: 0;
+  height: 20vh;
+  width: 100%;
+  border-bottom: dashed #065922;
+  background-color: rgba(64, 64, 64, 0.2862745098);
+}
+
+.page2 {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  top: 100vh;
+  background: #252525;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+.page2 h4 {
+  font-size: 2rem;
+  font-family: "Black Ops One", cursive;
+  color: white;
+}
+.page2 .quoteTxt {
+  position: absolute;
+  font-family: "Black Ops One", cursive;
+  color: white;
+  transform: translateY(5vh);
+}
+
+.page3 {
+  position: absolute;
+  top: 200vh;
+  height: 100vh;
+  width: 100%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+}
+.page3 .box1 {
+  position: absolute;
+  background: #26352a;
+  border-radius: 20px;
+  height: 80vh;
+  width: 60%;
+  top: -10vh;
+  display: flex;
+  justify-content: center;
+}
+.page3 .box1 .box2 {
+  position: absolute;
+  background: rgb(255, 255, 255);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  height: 10vh;
+  width: 100%;
+  top: 0vh;
+}
+
+.enterSite {
+  position: fixed;
+  background: #292929;
+  z-index: 100;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.enterSite.pulse {
+  animation: pulse 3s cubic-bezier(0.67, 0.16, 0.75, 0.57) 1 forwards;
+}
+
+@keyframes pulse {
+  0% {
+    background: white;
+  }
+  100% {
+    background: rgba(255, 255, 255, 0);
+    display: none;
+  }
+}
+.fa-solid.fa-play {
+  color: white;
+  font-size: 4rem;
+}
+
+.circle {
+  position: absolute;
+  transform: translateX(-3px);
+  stroke-dasharray: 314; /* Circumference of a circle with radius 50 */
+  stroke-dashoffset: 314;
+}
+
+.circle:hover {
+  stroke-dashoffset: 0;
+  transition: 1s ease-out;
+}/*# sourceMappingURL=App.css.map */
